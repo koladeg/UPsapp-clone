@@ -88,11 +88,5 @@
 		"style": {
 			"textTransform": "capitalize"
 		}
-	},
-	"text-blue-600": {
-		"style": {
-			"--tw-text-opacity": 1,
-			"color": "rgb(37 99 235 / var(--tw-text-opacity))"
-		}
 	}
 }
