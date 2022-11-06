@@ -7,3 +7,37 @@ type CustomerList = {
     name: ID;
     value: Customer;
 }
+
+type TrackingItems = {
+    customer_id: ID;
+    items: Item[];
+    customer: Customer;
+}
+
+type Items = {
+    item_id: ID;
+    name: string;
+    price: number;
+    quantity: number;
+}
+
+type OrderResponse = {
+    value: Order;
+}
+
+type CustomerResponse = {
+    name: ID;
+    value: Customer;
+}
+
+type Order = {
+    Address: string;
+    City: string;
+    Lat: number;
+    Lng: number;
+    carrier: string;
+    createdAt: string;
+    shippingCost: number;
+    trackingId: string;
+    trackingItems: TrackingItems;
+}
