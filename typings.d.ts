@@ -8,13 +8,13 @@ type CustomerList = {
     value: Customer;
 }
 
-type TrackingItems = {
+type TrackingItem = {
     customer_id: ID;
     items: Item[];
     customer: Customer;
 }
 
-type Items = {
+type Item = {
     item_id: ID;
     name: string;
     price: number;
@@ -39,5 +39,5 @@ type Order = {
     createdAt: string;
     shippingCost: number;
     trackingId: string;
-    trackingItems: TrackingItems;
+    trackingItems: TrackingItem;
 }

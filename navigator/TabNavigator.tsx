@@ -1,7 +1,7 @@
 import React, {useLayoutEffect} from 'react';
 import { View, Text } from 'react-native';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import CustomersScreen from "../screens/Customers";
+import CustomersScreen from "../screens/CustomersScreen";
 import OrdersScreen from "../screens/OrdersScreen";
 import { useNavigation } from '@react-navigation/native';
 import { Icon } from '@rneui/themed';
