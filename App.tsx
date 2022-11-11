@@ -7,7 +7,7 @@ import RootNavigator from "./navigator/RootNavigator";
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
 const client = new ApolloClient({
-    uri: "http://localhost:5001/api/lanky-wolf",
+    uri: "http://192.168.100.33/api/lanky-wolf",
     cache: new InMemoryCache(),
 });
 

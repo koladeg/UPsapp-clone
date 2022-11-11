@@ -27,6 +27,7 @@ const CustomersScreen = () => {
         navigation.setOptions({
             headerShown: false,
         })
+        console.log("stepzen data", data )
     }, [])
 
     return (
