@@ -14,13 +14,18 @@ type Props = {
     email: string;
 }
 
-const CustomerCard = ({ email, name, userId}: Props) => {
+const CustomerCard = ({ email, name, userId }: Props) => {
     const tw = useTailwind();
     const navigation = useNavigation<CustomerScreenNavigationProp>();
     const { loading, error, orders } = useCustomerOrders(userId);
 
     return (
-        <TouchableOpacity>
+        <TouchableOpacity
+            onPress={() => navigation.navigate('MyModal', {
+                name: name,
+                userID: userId,
+            })
+        }>
             <Card containerStyle={tw('p-5 rounded-lg')}>
                 <View>
                     <View style={tw('flex-row justify-between')}>

@@ -48,7 +48,7 @@ const CustomersScreen = () => {
                 )
                 .map(
                     ({ name: ID, value: { email, name } }: CustomerResponse) => (
-                        <CustomerCard key={ID} email={email} name={name} useId={ID} />
+                        <CustomerCard key={ID} email={email} name={name} userId={ID} />
                     )
             )}
         </ScrollView>

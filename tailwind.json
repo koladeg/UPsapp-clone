@@ -19,6 +19,21 @@
 			"position": "relative"
 		}
 	},
+	"right-5": {
+		"style": {
+			"right": 20
+		}
+	},
+	"top-5": {
+		"style": {
+			"top": 20
+		}
+	},
+	"z-10": {
+		"style": {
+			"zIndex": 10
+		}
+	},
 	"mb-5": {
 		"style": {
 			"marginBottom": 20
