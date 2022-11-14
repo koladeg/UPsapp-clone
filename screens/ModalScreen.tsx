@@ -10,6 +10,7 @@ import {RootStackParamList} from "../navigator/RootNavigator";
 import {GET_CUSTOMERS} from "../graphql/queries";
 import useCustomerOrders from "../hooks/useCustomerOrders";
 import DeliveryCard from "../components/DeliveryCard";
+import Colors from "../constants/Colors";
 
 type ModalScreenNavigationProp = CompositeNavigationProp<
     BottomTabNavigationProp<TabStackParamList>,
@@ -22,7 +23,7 @@ const ModalScreen = () => {
     const tw = useTailwind();
     const navigation = useNavigation<ModalScreenNavigationProp>();
     const {params: {name, userID}} = useRoute<ModalScreenRouteProp>()
-    const { loading, error, data } = useCustomerOrders(userID);
+    const { loading, error, orders } = useCustomerOrders(userID);
 
     return (
         <View>
@@ -35,14 +36,19 @@ const ModalScreen = () => {
                     type="antdesign"
                 />
             </TouchableOpacity>
-            <View>
-                <View>
-                    <Text>{name}</Text>
-                    <Text>deliveries</Text>
+            <View style={{ marginTop: 10 }}>
+                <View style={[tw('py-5 border-b'), { borderColor: Colors.primary}]}>
+                    <Text style={[tw('text-center text-xl font-bold'), { color: Colors.primary}]}>
+                        {name}
+                    </Text>
+                    <Text style={[tw('text-center italic text-sm'), { color: Colors.primary}]}>
+                        deliveries
+                    </Text>
                 </View>
             </View>
 
             <FlatList
+                contentContainerStyle={{ paddingBottom: 200}}
                 data={orders}
                 keyExtractor={order => order.trackingId}
                 renderItem={ ({item: order}) => <DeliveryCard order={order} />}
