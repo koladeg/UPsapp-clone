@@ -17,6 +17,5 @@ type Query {
   getCustomerById(id: ID!): Customer
     @rest(
       endpoint: "https://upsapp-clone-default-rtdb.firebaseio.com/customers/$id.json"
-      transforms: [{ pathpattern: [], editor: "objectToArray"}]
     )
 }

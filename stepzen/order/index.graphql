@@ -9,7 +9,7 @@ type Order {
     trackingId: String,
     trackingItems: TrackingItems
         @materializer(
-            query: "getTrackingItemById"
+            query: "getTrackingItemsById"
             arguments: [{ name: "id", field: "trackingId" }]
         )
 }
