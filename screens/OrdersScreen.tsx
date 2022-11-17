@@ -20,7 +20,6 @@ type OrdersScreenNavigationProp = CompositeNavigationProp<
 
 
 const OrdersScreen = () => {
-
     const tw = useTailwind();
     const navigation = useNavigation<OrdersScreenNavigationProp>();
     const { loading, error, orders } = useOrders();
