@@ -12,4 +12,4 @@ A react native clone of the UPS delivery tracking app for iOS and Android device
 
 # Demo
 
-![app image](./assets/demo.MP4)
+![app image](https://giphy.com/embed/0j0BbXWVtFbe84awU9)
