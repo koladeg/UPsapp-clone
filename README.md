@@ -11,3 +11,5 @@ A react native clone of the UPS delivery tracking app for iOS and Android device
 * Build backend GrapgQl interface & api with stepzen
 
 # Demo
+
+![app image](./assets/demo.MP4)
